@@ -4,6 +4,8 @@ import FormInput from '../components/FormInput'
 import FormButton from '../components/FormButton'
 import SocialButton from '../components/SocialButton'
 import { AuthContext } from '../navigation/AuthProvider'
+import { windowHeight, windowWidth } from '../utils/Dimentions'
+
 
 const LoginScreen = ({navigation}) => {
     const [email, setEmail] = useState()
@@ -34,7 +36,8 @@ const LoginScreen = ({navigation}) => {
             />  
 
             <FormButton 
-                buttonTitle="Sign In"
+                
+                buttonTitle="Sign In" 
                 onPress = {() => login(email, password)}
             />
 
