@@ -15,11 +15,20 @@ const AddRoomScreen = ({navigation}) => {
           firestore()
             .collection('THREADS')
             .add({
-              name: roomName
+              name: roomName, 
+              latestMessage: {
+                  text: `Masuk ke Room ${roomName}.`,
+                  createdAt : new Date().getTime()
               }
-            )
-            .then(() => {
-              navigation.navigate('Home');
+              })
+            .then(docRef => {
+              docRef.collection ('MESSAGES').add({
+                  text: `Kamu masuk ke Room ${roomName}.`,
+                  createdAt : new Date().getTime(),
+                  system: true
+              })
+              
+                navigation.navigate('Home');
             });
         }
     }
