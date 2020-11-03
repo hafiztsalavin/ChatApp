@@ -44,7 +44,7 @@ const AddRoomScreen = ({navigation}) => {
                 labelValue = {roomName}
                 onChangeText = {(userRoomName) =>setRoomName(userRoomName)}
                 placeholderText = 'Buat Room'
-                iconType = 'user'
+                iconType = 'plus'
                 autoCapitalize = 'none' // autokapil mati dan auto corect mati juga
                 autoCorrect = {false}
             />

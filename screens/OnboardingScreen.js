@@ -13,22 +13,30 @@ const Done = ({ ... props}) => (
 const OnboardingScreen = ({navigation}) => {
     return (
         <Onboarding
+        style={{bottomBarColor : '#fff'}}
         DoneButtonComponent={Done}
         onSkip={() => navigation.replace ('Login')} // jika skip replace dengan login dan tidak bisa kembali lagi
         onDone={() => navigation.navigate ('Login')} //jika selesai ke komponen login
             pages={[
                 {
+                    
                 backgroundColor: '#fff',
-                image: <Image source={require('../assets/onboarding-1.png')} style= {{width:250, height:250}} />,
+                image: <Image source={require('../assets/pake-1.png')} style= {{width:250, height:300}} />,
                 title: 'Chatting',
-                subtitle: 'Bebas Berchatting Ria',
+                subtitle: 'Bebas namun sopan dalam mengirim pesan.',
                 },
                 {
                     backgroundColor: '#fff',
-                    image: <Image source={require('../assets/onboarding-2.png')} style= {{width:250, height:250}} />,
-                    title: 'Free',
-                    subtitle: 'Bersama keluarga, pacar ataupun selingkuhan :)',
-                    }
+                    image: <Image source={require('../assets/pake-2.jpg')} style= {{width:250, height:300}} />,
+                    title: 'Bebas',
+                    subtitle: 'Bersama pacar ataupun selingkuhan :)',
+                    },
+                {
+                    backgroundColor: '#fff',
+                    image: <Image source={require('../assets/pake-3.jpg')} style= {{width:250, height:300}} />,
+                    title: 'Yeayy!!!',
+                    subtitle: 'Nikmati hanya di Ssstt! Chatting yuk :)',
+                    },
             ]}
         />
     )

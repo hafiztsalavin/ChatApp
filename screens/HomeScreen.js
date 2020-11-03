@@ -64,9 +64,9 @@ export default function HomeScreen({ navigation }) {
                 </TouchableOpacity>
             )}
         />
-        <View>
+        {/* <View>
         <FormButton buttonTitle='Keluar!' onPress={() => logout()} />
-        </View>
+        </View> */}
         </View>
     )
 }

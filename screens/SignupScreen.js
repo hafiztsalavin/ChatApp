@@ -57,7 +57,7 @@ const SignupScreen = ({navigation}) => {
                 <Text style={styles.color_textPrivate}>yang berlaku </Text>
             </View>
 
-            <SocialButton 
+            {/* <SocialButton 
                 buttonTitle = 'Masuk Lewat Facebook'
                 bntType = 'facebook'
                 color = '#4867aa'
@@ -69,10 +69,10 @@ const SignupScreen = ({navigation}) => {
                 bntType = 'google'
                 color = '#de4d41'
                 backgroundColor = '#f5e7ea'
-            />
+            /> */}
 
-            <TouchableOpacity style= {styles.forgotButton} onPress= {() => navigation.navigate ('Signup') }>
-                <Text style = {styles.navButtonText}>Buat Akun? Klik dong</Text>
+            <TouchableOpacity style= {styles.forgotButton} onPress= {() => navigation.navigate ('Login') }>
+                <Text style = {styles.navButtonText}>Sudah punya akun? Sini</Text>
             </TouchableOpacity>
 
         </View>
@@ -93,12 +93,13 @@ const styles = StyleSheet.create({
         fontFamily: 'Kufam-SemiBoldItalic',
         fontSize: 28,
         color: '#051d5f',
+        marginTop: 35
       },
       navButton: {
-        marginTop: 15,
+        marginTop: 35,
       },
       navButtonText: {
-        marginTop: 10,
+        marginTop: 40,
         fontSize: 18,
         fontWeight: '500',
         color: '#2e64e5',

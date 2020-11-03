@@ -85,14 +85,21 @@ const RoomScreen = ({ route }) =>  {
     return (
       <Bubble
         {...props}
+
         wrapperStyle={{
           right: {
             backgroundColor: '#2e64e5'
+          },
+          left:{
+            backgroundColor: '#e6eaf5'
           }
         }}
         textStyle={{
           right: {
             color: '#fff'
+          },
+          left: {
+            color: '#000'
           }
         }}
       />
@@ -144,7 +151,7 @@ const RoomScreen = ({ route }) =>  {
       alwaysShowSend
       showUserAvatar
       scrollToBottom
-      renderBubble={renderBubble}
+      renderBubble={renderBubble}    
       renderLoading={renderLoading}
       renderSend={renderSend}
       scrollToBottomComponent={scrollToBottomComponent}
@@ -156,6 +163,7 @@ const RoomScreen = ({ route }) =>  {
 export default RoomScreen
 
 const styles = StyleSheet.create({
+
   loadingContainer: {
     flex: 1,
     alignItems: 'center',

@@ -16,7 +16,7 @@ const LoginScreen = ({navigation}) => {
     return (
         <View style={styles.container}>
             <Image source= {require( '../assets/vector-chat-icon.jpg')} style={styles.logo} />
-            <Text style={styles.text}>Secret Chatting</Text>
+            <Text style={styles.text}>Chatting Yuk!</Text>
             <FormInput 
                 labelValue = {email}
                 onChangeText = {(userEmail) =>setEmail(userEmail)}
@@ -45,7 +45,7 @@ const LoginScreen = ({navigation}) => {
                 <Text style = {styles.navButtonText}>Lupa Password?</Text>
             </TouchableOpacity>
 
-            <SocialButton 
+            {/* <SocialButton 
                 buttonTitle = 'Masuk Lewat Facebook'
                 bntType = 'facebook'
                 color = '#4867aa'
@@ -57,10 +57,10 @@ const LoginScreen = ({navigation}) => {
                 bntType = 'google'
                 color = '#de4d41'
                 backgroundColor = '#f5e7ea'
-            />
+            /> */}
 
             <TouchableOpacity style= {styles.forgotButton} onPress={() => navigation.navigate('Signup')}>
-                <Text style = {styles.navButtonText}>Buat Akun? Klik dong</Text>
+                <Text style = {styles.navButtonText}>Mau buat Akun? Klik dong</Text>
             </TouchableOpacity>
 
         </View>

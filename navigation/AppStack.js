@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useContext} from 'react';
 import { createStackNavigator } from '@react-navigation/stack'
 import { View } from 'react-native'
 import { IconButton } from 'react-native-paper'
@@ -6,7 +6,7 @@ import { IconButton } from 'react-native-paper'
 import HomeScreen from '../screens/HomeScreen'
 import AddRoomScreen from '../screens/AddRoomScreen'
 import RoomScreen from '../screens/RoomScreen'
-import { roundToNearestPixel } from 'react-native/Libraries/Utilities/PixelRatio';
+import { AuthContext} from '../navigation/AuthProvider'
 
 const ChatStack = createStackNavigator()
 const HomeStack = createStackNavigator()
@@ -14,6 +14,7 @@ const ModalStack = createStackNavigator()
 const RoomStack = createStackNavigator()
 
 function ChatApp () {
+  
   return (
     <ChatStack.Navigator
       screenOptions={{
@@ -44,6 +45,8 @@ function ChatApp () {
 }
 
 function Home (){
+  const {user, logout} = useContext (AuthContext)
+
   return(
     <HomeStack.Navigator
       screenOptions={{
@@ -65,7 +68,12 @@ function Home (){
             <View>
               <IconButton icon="message-plus" size={32}  backgroundColor='#ffffff' color='#2e64e5' onPress={() => navigation.navigate('ChatApp')} />
             </View>
-            )
+            ),
+            headerLeft: () =>(
+              <View>
+                <IconButton icon="logout-variant" size={28}  backgroundColor='#ffffff' color='#2e64e5' onPress={() => logout()} />
+              </View>
+              )
         })} 
       />
 
